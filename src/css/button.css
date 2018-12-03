@@ -1,0 +1,555 @@
+/*
+BUTTONS
+Location: /shared/css/base/_buttons.css
+Styleguide: /base/buttons.php
+*/
+
+/* -----------
+DEFAULT BUTTON
+----------- */
+
+.btn,
+.ui-dialog .ui-dialog-buttonpane button { /* jquery ui dialog button */
+	border-radius: 5px;
+	display: inline-block;
+    font-family: "Roboto Condensed", sans-serif;
+	font-size: 1rem;
+	font-weight: bold;
+	line-height: 17px;
+    padding: 4px 14px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: background  .4s, border .4s, color .4s;
+    vertical-align: middle;
+    z-index: 1;
+}
+    .btn.active,
+    .btn:hover:not(.is-disabled),
+    .ui-dialog .ui-dialog-buttonpane button:hover { /* jquery ui dialog button */
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+/* buttons with arrows */
+    .btn .arrowRight {
+        margin-left: 5px;
+        border-left-color: #fff;
+    }
+    .btn .arrowLeft {
+        margin-left: 5px;
+        border-right-color: #fff;
+    }
+    .btn:hover .arrowRight {
+        margin-left: 5px;
+        border-left-color: #0085C9;
+    }
+    .btn:hover .arrowLeft {
+        margin-left: 5px;
+        border-right-color: #0085C9;
+    }
+    .btn.btn-alt:hover .arrowRight {
+        margin-left: 5px;
+        border-left-color: #C83192;
+    }
+    .btn.btn-alt:hover .arrowLeft {
+        margin-left: 5px;
+        border-right-color: #C83192;
+    }
+    .btn.btn-prominent:hover .arrowRight {
+        margin-left: 5px;
+        border-left-color: #e21d46;
+    }
+    .btn.btn-prominent:hover .arrowLeft {
+        margin-left: 5px;
+        border-right-color: #e21d46;
+    }
+    .btn.btn-confirm:hover .arrowRight {
+        margin-left: 5px;
+        border-left-color: #379F0C;
+    }
+    .btn.btn-confirm:hover .arrowLeft {
+        margin-left: 5px;
+        border-right-color: #379F0C;
+    }
+    .btn.btn-assign:hover .arrowRight {
+        margin-left: 5px;
+        border-left-color: #E26D13;
+    }
+    .btn.btn-assign:hover .arrowLeft {
+        margin-left: 5px;
+        border-right-color: #E26D13;
+    }
+    .btn.btn-help:hover .arrowRight,
+    .btn.btn-subtle:hover .arrowRight {
+        margin-left: 5px;
+        border-left-color: #000;
+    }
+    .btn.btn-help:hover .arrowLeft,
+    .btn.btn-subtle:hover .arrowLeft {
+        margin-left: 5px;
+        border-right-color: #000;
+    }
+
+/* ----------
+PILLS
+(extra .btn selector needed for specificity relating to button colors)
+---------- */
+
+.btn.btn-pill {
+    padding-left: 34px;
+    position: relative;
+}
+    .btn.btn-pill .icon {
+        border-radius: 3px 0 0 3px;
+        height: 27px;
+        line-height: 27px;
+        left: -1px;
+        margin: 0;
+        position: absolute;
+        text-align: center;
+        top: -1px;
+        width: 28px;
+    }
+
+/* ----------------
+DEPRECATED - STATES
+---------------- */
+
+.btn.btn-pending {
+    cursor: progress;
+}
+.btn.btn-off,
+.btn.btn-off:hover:not(.is-disabled),
+.btn.btn-pending,
+.btn.btn-pending:hover:not(.is-disabled) {
+    background: #ddd;
+    border-color: #ddd;
+    color: #999;
+    cursor: default;
+}
+    .btn.btn-off:visited,
+    .btn.btn-pending:visited {
+        color: #777;
+    }
+
+.box.btn-off,
+.box.btn-pending {
+    color: #777;
+}
+
+edit-student-button.studentSummary-editBtn  .tooltip {
+    margin-left: 10px;
+    color: #0085C9;
+    font-size: 18px;
+    transition: opacity 0.3s;
+}
+
+edit-student-button.studentSummary-editBtn  .tooltip-top:hover::after,
+edit-student-button.studentSummary-editBtn  .tooltip-top:focus-within::after {
+    margin-left: -6px;
+}
+
+edit-student-button.studentSummary-editBtn  button {
+    padding-bottom: 10px;
+}
+edit-student-button.studentSummary-editBtn  button:focus,
+edit-student-button.studentSummary-editBtn  button:hover {
+    outline: none;
+}
+
+edit-student-button.studentSummary-editBtn  .tooltip_message {
+    font-family: Roboto Condensed, Arial, Helvetica, sans-serif;
+}
+
+/*
+BUTTON COLORS
+Location: /shared/css/base/_buttons-colors.css
+Styleguide: /base/button-colors.php
+*/
+
+/* ----
+DEFAULT
+---- */
+
+.btn,
+.ui-dialog .ui-dialog-buttonpane button { /* jquery ui dialog button */
+    background: #0085C9;
+    border: solid 2px #0085C9;
+    color: #fff;
+}
+    .btn.active,
+    .btn:hover:not(.is-disabled),
+    .btn:focus:not(.is-disabled),
+    .ui-dialog .ui-dialog-buttonpane button:focus,
+    .ui-dialog .ui-dialog-buttonpane button:hover { /* jquery ui dialog button */
+        background-color: transparent;
+        color: #0085C9;
+    }
+    .btn:visited {
+        color: #fff;
+    }
+
+/* pill (extra .btn selector needed for specificity) */
+.btn.btn-pill {
+    background: transparent;
+    color: #222;
+}
+    .btn.btn-pill:hover:not(.is-disabled),
+    .btn.btn-pill:focus:not(.is-disabled) {
+        background: #0085C9;
+        color: #fff;
+    }
+    .btn.btn-pill .icon {
+        background: #0085C9;
+        color: #fff;
+    }
+
+/* for use on dark background (extra .btn selector needed for specificity) */
+.btn.btn-pill.btn-lt {
+    color: #fff;
+}
+
+/* inverse (extra .btn selector needed for specificity) */
+.btn.btn-inverse {
+    background-color: transparent;
+    color: #0085C9;
+}
+.btn.btn-inverse:focus:not(.is-disabled),
+.btn.btn-inverse:hover:not(.is-disabled) {
+    background-color: #0085C9;
+    color: #FFF;
+}
+
+/* opaque */
+.btn-opaque:focus:not(.is-disabled),
+.btn-opaque:hover:not(.is-disabled) {
+    background-color: #fff;
+}
+.btn-inverse.btn-opaque {
+    background-color: #fff;
+}
+.btn-pill.btn-opaque {
+    background-color: #fff;
+}
+
+/* -----
+ALTERNATE
+----- */
+
+.btn-alt {
+	background-color: #c83192;
+    border-color: #c83192;
+}
+    .btn-alt:focus:not(.is-disabled),
+    .btn-alt:hover:not(.is-disabled) {
+        color: #c83192;
+    }
+
+    /* TODO: find out what box.btn is used for */
+    .box.btn-alt {
+        color: #c83192;
+    }
+
+/* inverse */
+.btn-inverse.btn-alt {
+    color: #c83192;
+}
+    .btn-inverse.btn-alt:focus:not(.is-disabled),
+    .btn-inverse.btn-alt:hover:not(.is-disabled) {
+        background-color: #c83192;
+    }
+
+/* pill */
+.btn-pill.btn-alt {}
+    .btn-pill.btn-alt:hover:not(.is-disabled),
+    .btn-pill.btn-alt:focus:not(.is-disabled),
+    .btn-pill.btn-alt .icon {
+        background-color: #c83192;
+    }
+
+/* -----
+PROMINENT
+----- */
+
+.btn-prominent {
+    background-color: #e21d46;
+    border-color: #e21d46;
+}
+    .btn-prominent:focus:not(.is-disabled),
+    .btn-prominent:hover:not(.is-disabled) {
+        color: #e21d46;
+    }
+
+    /* TODO: find out what box.btn is used for */
+    .box.btn-prominent {
+        color: #fff;
+    }
+
+/* inverse */
+.btn-inverse.btn-prominent {
+    color: #e21d46;
+}
+    .btn-inverse.btn-prominent:focus:not(.is-disabled),
+    .btn-inverse.btn-prominent:hover:not(.is-disabled) {
+        background-color: #e21d46;
+    }
+
+/* pill */
+.btn-pill.btn-prominent {}
+    .btn-pill.btn-prominent:hover:not(.is-disabled),
+    .btn-pill.btn-prominent:focus:not(.is-disabled),
+    .btn-pill.btn-prominent .icon {
+        background-color: #e21d46;
+    }
+
+/* -----
+CONFIRM
+----- */
+
+.btn-confirm,
+.ui-dialog .ui-dialog-buttonpane button { /* jquery ui dialog button */
+	background-color: #379F0C;
+    border-color: #379F0C;
+}
+    .btn-confirm:hover:not(.is-disabled),
+    .btn-confirm:focus:not(.is-disabled),
+    .ui-dialog .ui-dialog-buttonpane button:hover,
+    .ui-dialog .ui-dialog-buttonpane button:hover { /* jquery ui dialog button */
+        color: #379F0C;
+    }
+
+/* inverse */
+.btn-inverse.btn-confirm {
+    color: #379F0C;
+}
+    .btn-inverse.btn-confirm:focus:not(.is-disabled),
+    .btn-inverse.btn-confirm:hover:not(.is-disabled) {
+        background-color: #379F0C;
+    }
+
+/* pill */
+.btn-pill.btn-confirm {}
+    .btn-pill.btn-confirm:hover:not(.is-disabled),
+    .btn-pill.btn-confirm:focus:not(.is-disabled),
+    .btn-pill.btn-confirm .icon {
+        background-color: #379F0C;
+    }
+
+/* -----
+ASSIGN
+----- */
+
+.btn-assign {
+    background-color: #E26D13;
+    border-color: #E26D13;
+}
+    .btn-assign:focus:not(.is-disabled),
+    .btn-assign:hover:not(.is-disabled) {
+        color: #E26D13;
+    }
+
+/* inverse */
+.btn-inverse.btn-assign {
+    color: #E26D13;
+}
+    .btn-inverse.btn-assign:focus:not(.is-disabled),
+    .btn-inverse.btn-assign:hover:not(.is-disabled) {
+        background-color: #E26D13;
+    }
+
+/* pill */
+.btn-pill.btn-assign {}
+    .btn-pill.btn-assign:hover:not(.is-disabled),
+    .btn-pill.btn-assign:focus:not(.is-disabled),
+    .btn-pill.btn-assign .icon {
+        background-color: #E26D13;
+    }
+
+/* -----
+HELP
+----- */
+
+.btn-help {
+    background-color: #ECB30B;
+    border-color: #ECB30B;
+    color: #222;
+}
+    .btn-help:visited {
+        color: #222;
+    }
+    .btn-help:focus:not(.is-disabled),
+    .btn-help:hover:not(.is-disabled) {
+        background: #fff;
+        color: #222;
+    }
+
+    .btn-help .arrowRight {
+        border-left-color: #222;
+    }
+    .btn-help .arrowLeft {
+        border-right-color: #222;
+    }
+
+    /* TODO: find out what box.btn is used for */
+    .box.btn-help {
+        color: #222;
+    }
+
+/* inverse */
+.btn-inverse.btn-help {
+    color: #222;
+}
+    .btn-inverse.btn-help:focus:not(.is-disabled),
+    .btn-inverse.btn-help:hover:not(.is-disabled) {
+        background-color: #ECB30B;
+        color: #222;
+    }
+
+/* pill */
+.btn-pill.btn-help {}
+    .btn-pill.btn-help:focus:not(.is-disabled),
+    .btn-pill.btn-help:hover:not(.is-disabled){
+        background-color: #ECB30B;
+        color: #222;
+    }
+    .btn-pill.btn-help .icon {
+        background-color: #ECB30B;
+    }
+
+/* -----
+SUBTLE
+----- */
+
+.btn-subtle {
+    background-color: #bbb;
+    border-color: #bbb;
+    color: #222;
+}
+    .btn-subtle:visited,
+    .btn-subtle:focus:not(.is-disabled),
+    .btn-subtle:hover:not(.is-disabled){
+        color: #222;
+    }
+
+    .btn-subtle .arrowRight {
+        border-left-color: #222;
+    }
+    .btn-subtle .arrowLeft {
+        border-right-color: #222;
+    }
+
+    /* TODO: find out what .box.btn is used for */
+    .box.btn-subtle {
+        color: #222;
+    }
+
+/* inverse */
+.btn-inverse.btn-subtle {
+    color: #222;
+}
+    .btn-inverse.btn-subtle:focus:not(.is-disabled),
+    .btn-inverse.btn-subtle:hover:not(.is-disabled) {
+        background-color: #bbb;
+        color: #222;
+    }
+
+/* pill */
+.btn-pill.btn-subtle {}
+    .btn-pill.btn-subtle:focus:not(.is-disabled),
+    .btn-pill.btn-subtle:hover:not(.is-disabled) {
+        background-color: #bbb;
+        color: #222;
+    }
+    .btn-pill.btn-subtle .icon {
+        background-color: #bbb;
+    }
+
+/* -----
+CANCEL (plain text link)
+----- */
+
+.btn.btn-fauxLink,
+.btn.btn-fauxLink:focus:not(.is-disabled),
+.btn.btn-fauxLink:hover:not(.is-disabled) { /* extra .btn needed to prevent site-specific overrides */
+    background: none;
+    border-color: transparent;
+    color: #0089E5;
+    cursor: pointer;
+}
+    .btn.btn-fauxLink:focus,
+    .btn.btn-fauxLink:hover{
+        text-decoration: underline;
+    }
+    .btn.btn-fauxLink:visited {
+        color: #0089E5;
+    }
+
+/* inverse */
+.btn-fauxLink.btn-inverse {
+    color: #7DD2FE;
+}
+    .btn-fauxLink.btn-inverse:focus,
+    .btn-fauxLink.btn-inverse:hover {
+        border-color: transparent;
+        color: #fff;
+    }
+
+    /*
+BUTTON SIZES
+Location: /shared/css/base/_buttons-sizes.css
+Styleguide: /base/buttons.php
+*/
+
+.btn-sm {
+    border-radius: 4px;
+    font-size: .9rem;
+    padding: 2px 9px;
+}
+.btn-lg {
+    border-radius: 6px;
+    font-size: 1.1rem;
+    padding: 6px 19px;
+}
+.btn-xl {
+    font-size: 1.2rem;
+    padding: 8px 19px;
+}
+.btn-full {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+}
+
+/* ----------
+PILLS
+---------- */
+
+.btn-pill.btn-sm {
+    padding-left: 30px;
+}
+    .btn-pill.btn-sm .icon {
+        height: 23px;
+        line-height: 23px;
+        width: 26px;
+    }
+
+.btn-pill.btn-lg {
+    padding-left: 38px;
+}
+    .btn-pill.btn-lg .icon {
+        height: 30px;
+        line-height: 30px;
+        width: 32px;
+    }
+.btn-pill.btn-xl {
+    padding-left: 42px;
+}
+    .btn-pill.btn-xl .icon {
+        height: 34px;
+        line-height: 34px;
+        width: 36px;
+    }
+
+
+
